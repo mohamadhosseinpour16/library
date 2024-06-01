@@ -1,1 +1,27 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  font-family: cursive, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2rem 1rem;
+}
+#root img {
+  width: 60%;
+  height: 300px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}/*# sourceMappingURL=style.css.map */
