@@ -1,0 +1,65 @@
+// variable
+$secondary-color : #f19372;
+$primary-color: #182f41;
+$color-white: #fff;
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: $secondary-color ;
+    color: $primary-color;
+
+    &>.icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 30%;
+        right: 10%;
+
+        &>i {
+            font-size: 2.3rem;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        &>#books {
+            display: none;
+        }
+
+        &>#basket {
+            position: relative;
+
+            &>span {
+                background-color: $primary-color;
+                color: $color-white;
+                position: absolute;
+                top: -19%;
+                left: -26%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                font-size: 1.3rem;
+                font-weight: 400;
+                padding: 1rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &>.content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &>h1 {
+            font-size: 2.3rem;
+            margin: 0;
+            padding: 1.5rem 0;
+        }
+    }
+}

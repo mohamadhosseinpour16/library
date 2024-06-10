@@ -4,6 +4,7 @@
 }
 
 body {
+  background-color: #182f41;
   margin: 0;
 }
 
@@ -24,4 +25,58 @@ body {
   flex-direction: column;
   align-items: center;
   width: 25%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #f19372;
+  color: #182f41;
+}
+header > .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+header > .icons > i {
+  font-size: 2.3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+header > .icons > #books {
+  display: none;
+}
+header > .icons > #basket {
+  position: relative;
+}
+header > .icons > #basket > span {
+  background-color: #182f41;
+  color: #fff;
+  position: absolute;
+  top: -19%;
+  left: -26%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 1rem;
+  border-radius: 50%;
+}
+header > .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header > .content > h1 {
+  font-size: 2.3rem;
+  margin: 0;
+  padding: 1.5rem 0;
 }/*# sourceMappingURL=style.css.map */
