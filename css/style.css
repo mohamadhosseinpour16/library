@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 2rem 1rem;
+  margin: 0 1rem;
 }
 #root img {
   width: 60%;
@@ -48,9 +48,6 @@ header > .icons > i {
   padding: 0.5rem;
   cursor: pointer;
 }
-header > .icons > #books {
-  display: none;
-}
 header > .icons > #basket {
   position: relative;
 }
@@ -79,4 +76,31 @@ header > .content > h1 {
   font-size: 2.3rem;
   margin: 0;
   padding: 1.5rem 0;
+}
+
+.unshow {
+  opacity: 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.buttons > button {
+  margin: 0 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #f19372;
+  color: #182f41;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.buttons > button:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */

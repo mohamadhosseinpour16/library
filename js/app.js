@@ -1,7 +1,10 @@
 // select dom , var
 let root = document.getElementById("root");
+let buttons = document.querySelectorAll("button");
+let bookIcon = document.getElementById("bookicon");
 
 // functions
+// render 
 function render(list) {
   root.innerHTML = "";
   let template = list
@@ -21,5 +24,25 @@ function render(list) {
   root.innerHTML = template;
 }
 
-// event
+// filterGenre
+function filterGenre(genre) {
+  let filterBooks = librarys.filter((item) => item.genre === genre);
+  render(filterBooks);
+  bookIcon.classList.remove("unshow");
+}
+// renderAllBook
+function renderAllBooks(list) {
+  render(list);
+  bookIcon.classList.add("unshow");
+}
+
+// events
 window.addEventListener("load", render(librarys));
+for (const button of buttons) {
+  button.addEventListener("click", function () {
+    filterGenre(this.textContent);
+  });
+}
+bookIcon.addEventListener("click", function () {
+  renderAllBooks(librarys);
+});

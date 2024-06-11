@@ -25,10 +25,6 @@ header {
             cursor: pointer;
         }
 
-        &>#books {
-            display: none;
-        }
-
         &>#basket {
             position: relative;
 
@@ -62,4 +58,8 @@ header {
             padding: 1.5rem 0;
         }
     }
+}
+
+.unshow {
+    opacity: 0;
 }
