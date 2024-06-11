@@ -4,7 +4,7 @@ let buttons = document.querySelectorAll("button");
 let bookIcon = document.getElementById("bookicon");
 
 // functions
-// render 
+// render
 function render(list) {
   root.innerHTML = "";
   let template = list
@@ -17,6 +17,7 @@ function render(list) {
                 <h2> نویسنده : ${author}</h2>
                 <h3> سال انتشار : ${published_date}</h3>
                 <h3> ژانر : ${genre}</h3>
+                <button>اضافه به سبد خرید</button>
             </div>
         `;
     })
