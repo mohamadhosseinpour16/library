@@ -31,7 +31,7 @@ function render(List) {
   root.innerHTML = template;
 }
 // filterGenre
-function filterGenre(genre) { 
+function filterGenre(genre) {
   let filterBooks = librarys.filter((item) => item.genre === genre);
   render(filterBooks);
   bookIcon.classList.remove("unshow");
@@ -50,6 +50,7 @@ function renderAllBooks(List) {
 function addToBasket(id) {
   let findBook = librarys.find((item) => item.id === id);
   basket.push(findBook);
+  localStorage.setItem("Basket", JSON.stringify(basket));
   updateValueBasket();
 }
 // updateValueBasket
@@ -83,9 +84,14 @@ function renderBasket(List) {
 function removeBasket(id) {
   let findBook = basket.find((item) => item.id === id);
   basket.splice(findBook, 1);
+  localStorage.setItem("Basket", JSON.stringify(basket));
   renderBasket(basket);
   updateValueBasket();
 }
+
+let basketStore = localStorage.getItem("Basket");
+basket = JSON.parse(basketStore);
+updateValueBasket();
 
 // events
 window.addEventListener("load", render(librarys));
